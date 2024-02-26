@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'));
 
 app.get('/api/currency', async (req, res) => {
-  const apiKey = 'YOUR_API_KEY'; // Replace with your API key
+  const apiKey = 'null'; 
   const from = req.query.from || 'USD';
   const to = req.query.to || 'INR';
   const url = `https://open.er-api.com/v6/latest/${apiKey}?from=${from}&to=${to}`;
