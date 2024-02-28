@@ -1,4 +1,4 @@
-const cchangeURL = "https://open.er-api.com/v6/latest/YOUR_API_KEY";
+const cchangeURL = "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_FAdHQliAMx0DN6s1YFPRsfsgaoSIUJZiio5rf5aq";
 const dropdowns = document.querySelectorAll(".dropdown select");
 const formCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
@@ -35,7 +35,9 @@ butt.addEventListener("click", async (evt) => {
     let amount = document.querySelector(".amt input").value;
     let fromCur = formCurr.value;
     let toCur = toCurr.value;
-    const URL = `${cchangeURL}?from=${fromCur}&to=${toCur}`;
+    const URL = `${cchangeURL}&=currencie${fromCur}&base_currency=${toCur}`; //currencies=INR&base_currency=BGN
+    // full api =https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_FAdHQliAMx0DN6s1YFPRsfsgaoSIUJZiio5rf5aq
+    //&currencies=INR&base_currency=BGN
 
     try {
         let response = await fetch(URL);
