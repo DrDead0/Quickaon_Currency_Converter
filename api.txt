@@ -1,4 +1,5 @@
 API Key="fca_live_FAdHQliAMx0DN6s1YFPRsfsgaoSIUJZiio5rf5aq".
 API="https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_FAdHQliAMx0DN6s1YFPRsfsgaoSIUJZiio5rf5aq".
 
+
 //Api and its key.
