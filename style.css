@@ -1,127 +1,144 @@
-
+/* General Reset */
 * {
-    padding: 0;
     margin: 0;
-}
-
-header {
-    background-color: #153243;
-    color: #d6d6d6;
-    text-align: center;
-}
-
-.head {
-    background-color: #0D1B2A;
-    text-align: center;
-    height: 110px;
-    font-size: 40px;
-    color: #d6d6d6;
-}
-
-.button:hover {
-    background-color: red;
-}
-
-.navicont {
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #fef9ff, #d6efff);
+    color: #444;
+    min-height: 100vh;
     display: flex;
-    font-size: 20px;
-    font-weight: bolder;
-    gap: 30px;
-    margin-left: 42%;
+    flex-direction: column;
     align-items: center;
-    height: 35px;
-}
-
-.navicont, a {
-    color: #d6d6d6;
-    text-decoration: none;
-}
-
-.maincontainer {
-    height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-img {
-    height: 30px;
-    width: 30px;
-}
-
-form {
-    margin-top: 2rem;
-}
-
-form, button, input, select {
+  }
+  
+  /* Header */
+  header {
     width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 0.75rem;
-}
-
-footer {
-    background-color: #0D1B2A;
-    height: 180px;
-    color: #edf6f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-footer, a {
-    color: #edf6f9;
-}
-
-.in {
-    border: 1px solid grey;
-    font-size: 1.2rem;
-    height: 3rem;
-    padding-left: 0.6rem;
-}
-
-.dropdown {
+    background: #85c7f2;
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
-}
-
-.selectcontainer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 6rem;
-    border-radius: 0.5rem;
-    border: 1px solid grey;
-}
-
-img {
-    margin-left: 0.6rem;
-}
-
-.main {
-    font-size: 20px;
-    column-gap: 20px;
-}
-
-.dropdown i {
-    font-size: 1.5rem;
-    margin-top: 1.2rem;
-}
-
-.but {
-    margin-top: 2rem;
-    height: 4rem;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: black;
-    background-color: #a8dadc;
-}
-
-.but select {
-    background-color: red;
-}
-```
-
+  }
+  
+  header .logo img {
+    width: 50px;
+    margin-right: 15px;
+  }
+  
+  header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: url('clouds.png') repeat-x;
+    animation: moveClouds 20s linear infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes moveClouds {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .converter-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .converter-container h2 {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+  }
+  
+  select, input, button {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  select {
+    background: #f3f7fa;
+  }
+  
+  button {
+    background: #4a90e2;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #3a7ad9;
+  }
+  
+  /* Result Box */
+  .result-box {
+    background: #85c7f2;
+    color: white;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #4a90e2;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+  }
+  
