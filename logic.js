@@ -50,4 +50,8 @@ const countryList = {
   
   document.getElementById("converter-form").addEventListener("submit", handleConversion);
   populateDropdowns();
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 28949b983a7a72166a1ad89faa2a51d6431b11a6
